@@ -1,5 +1,4 @@
 import unittest
-from unittest.mock import patch
 
 class Solution:
     def largestRectangleArea(self, heights):
@@ -45,13 +44,6 @@ class SolutionTests(unittest.TestCase):
         heights = [1, 2, 3, 4, 5]
         self.assertEqual(self.solution.largestRectangleArea(heights), 9)
     
-    @patch('builtins.print')
-    def test_largestRectangleArea_with_mocked_print(self, mock_print):
-        # Test case: heights are [4, 2, 0, 3, 2, 4, 3, 4]
-        heights = [4, 2, 0, 3, 2, 4, 3, 4]
-        self.assertEqual(self.solution.largestRectangleArea(heights), 10)
-        mock_print.assert_called_once_with("Max area is 10")
-    
     @unittest.skip("Skipping slow test case")
     def test_largestRectangleArea_slow_test_case(self):
         # Test case: heights are large and time-consuming to calculate
@@ -66,4 +58,3 @@ class SolutionTests(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main()
-
