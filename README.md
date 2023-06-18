@@ -17,7 +17,6 @@ By incorporating the use of test stubs, intentional failing test cases, and othe
 
 1. Finding and Reporting Bugs:
     * This test case uses heights in descending order, which is not handled correctly in the current implementation. By adding this failing test case, it helps to uncover the bug and report it to the development team for fixing.
-2. Use of Test Stubs (Mocks/Stubs):
-    *  which demonstrates the use of a test stub. The print function is mocked using the @patch('builtins.print') decorator. This allows me to verify that the print function is called correctly during the execution of the largestRectangleArea method. In this case, it asserts that the correct message is printed.
-3. Test Parametrization:
+
+2. Test Parametrization:
     * I can achieve similar functionality using external libraries such as parameterized or pytest. However, in this example, I have not used test parametrization to keep the code compatible with the standard unittest module.
